@@ -8,14 +8,14 @@ import {
 } from 'react-router-dom';
 
 
-import AdminCommonTemplate from './AdminCommonTemplate';
-import FrontendTemplate from './FrontendTemplate';
-import Home from './Home';
-import Dashboard from './Dashboard';
-import Registration from './Registration';
-import Authorisation from './Authorisation';
-import Yogis from './Yogis';
-import PageNotFound from './PageNotFound';
+import AdminCommonTemplate from './AdminElements/AdminCommonTemplate';
+import FrontendTemplate from './AdminElements/FrontendTemplate';
+import Home from './PageComponents/Home';
+import Dashboard from './PageComponents/Dashboard';
+import Registration from './PageComponents/Registration';
+import Authorisation from './PageComponents/Authorisation';
+import Yogis from './PageComponents/Yogis';
+import PageNotFound from './PageComponents/PageNotFound';
 
 class MainRouting extends React.Component {
   render() {
