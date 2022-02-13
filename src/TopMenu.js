@@ -1,27 +1,27 @@
 import React from 'react';
 
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import { Menu } from 'antd';
 
 export default class TopMenu extends React.Component {
   render() {
+    const pathname = window.location.pathname;
+
     return (
-      <Menu theme="light" mode="horizontal" defaultSelectedKeys={['1']} style={{ float: 'left'}}> 
-        <Menu.Item key="0">
-          <Link to="/">Home</Link>
+      <Menu theme="light" 
+        mode="horizontal" 
+        defaultSelectedKeys={['/']}
+        selectedKeys={[pathname]}
+        style={{ float: 'left'}}> 
+        <Menu.Item key="/">
+          <NavLink to="/">Home</NavLink>
         </Menu.Item>
-        <Menu.Item key="1">
-        <Link to="/Schedule">Schedule</Link>
+        <Menu.Item key="/dashboard">
+        <NavLink to="/dashboard">Dashboard</NavLink>
         </Menu.Item>
-        <Menu.Item key="2">
-        <Link to="/teachers">Teachers</Link>
-        </Menu.Item>
-        <Menu.Item key="3">
-        <Link to="/prices">Prices</Link>
-        </Menu.Item>
-        <Menu.Item key="4">
-        <Link to="/about">About</Link>
+        <Menu.Item key="/registration">
+        <NavLink to="/registration">Registration</NavLink>
         </Menu.Item>
       </Menu>
     );

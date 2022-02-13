@@ -1,8 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import 'antd/dist/antd.css';
-
 import {
   BrowserRouter as Router,
   Routes,
@@ -11,20 +9,27 @@ import {
 
 
 import AdminCommonTemplate from './AdminCommonTemplate';
+import FrontendTemplate from './FrontendTemplate';
+import Home from './Home';
 import Dashboard from './Dashboard';
+import Registration from './Registration';
 import Yogis from './Yogis';
+import PageNotFound from './PageNotFound';
 
-class SiderDemo extends React.Component {
+class MainRouting extends React.Component {
   render() {
     return (
       <Router>
         <Routes>
-          <Route path="/" element={<AdminCommonTemplate><Dashboard /></AdminCommonTemplate>} />
-          <Route path="/Yogis" element={<AdminCommonTemplate><Yogis /></AdminCommonTemplate>} />
+          <Route path="/" element={<FrontendTemplate><Home /></FrontendTemplate>} />
+          <Route path="/dashboard" element={<AdminCommonTemplate><Dashboard /></AdminCommonTemplate>} />
+          <Route path="/registration" element={<FrontendTemplate><Registration /></FrontendTemplate>} />
+          <Route path="/yogis" element={<AdminCommonTemplate><Yogis /></AdminCommonTemplate>} />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </Router>
     );
   }
 }
 
-ReactDOM.render(<SiderDemo />, document.getElementById('root'));
+ReactDOM.render(<MainRouting />, document.getElementById('root'));
