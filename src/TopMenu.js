@@ -1,7 +1,5 @@
 import React from 'react';
-
 import { NavLink } from 'react-router-dom';
-
 import { Menu } from 'antd';
 
 export default class TopMenu extends React.Component {
@@ -18,10 +16,13 @@ export default class TopMenu extends React.Component {
           <NavLink to="/">Home</NavLink>
         </Menu.Item>
         <Menu.Item key="/dashboard">
-        <NavLink to="/dashboard">Dashboard</NavLink>
+          <NavLink to="/dashboard">Dashboard</NavLink>
         </Menu.Item>
         <Menu.Item key="/registration">
-        <NavLink to="/registration">Registration</NavLink>
+          <NavLink to="/registration">Registration</NavLink>
+        </Menu.Item>
+        <Menu.Item key="/authorization">
+          <NavLink to="/authorization">Authorization</NavLink>
         </Menu.Item>
       </Menu>
     );
