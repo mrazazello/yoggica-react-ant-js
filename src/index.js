@@ -11,7 +11,7 @@ import Home from './Pages/Home';
 import Dashboard from './Pages/Dashboard';
 import Registration from './Pages/Registration';
 import Authorisation from './Pages/Authorisation';
-import Yogis from './Pages/Yogis';
+import YogiList from './Pages/YogiList';
 import PageNotFound from './Pages/PageNotFound';
 
 class MainRouting extends React.Component {
@@ -22,7 +22,7 @@ class MainRouting extends React.Component {
           <Route path="/" element={<Home />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/registration" element={<Registration />} />
-          <Route path="/yogis" element={<Yogis />} />
+          <Route path="/yogilist" element={<YogiList />} />
           <Route path="/authorization" element={<Authorisation />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>

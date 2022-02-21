@@ -17,8 +17,8 @@ export default class SideMenu extends React.Component {
         mode="inline" 
         defaultSelectedKeys={['1']}
         selectedKeys={[pathname]}>
-        <Menu.Item key="/yogis" icon={<UserOutlined />}>
-          <Link to="/yogis">Yogis</Link>
+        <Menu.Item key="/yogilist" icon={<UserOutlined />}>
+          <Link to="/yogilist">Yogis</Link>
         </Menu.Item>
         <Menu.Item key="/yogastudio" icon={<VideoCameraOutlined />}>
           <Link to="/yogastudio">Yoga-studio</Link>
