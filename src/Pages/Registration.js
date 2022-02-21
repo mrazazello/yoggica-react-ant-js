@@ -1,12 +1,14 @@
 import React from 'react';
 import 'antd/dist/antd.css';
-import { Form, Input, Button, Checkbox } from 'antd';
+import { Form, Input, Button, Typography } from 'antd';
+import FrontendTemplate from '../Components/FrontendTemplate'
 
 
 
-export default class Authorization extends React.Component {
+export default class Registration extends React.Component {
   render() {
-    
+    const { Title } = Typography;
+
     const onFinish = (values) => {
         console.log('Success:', values);
     };
@@ -16,10 +18,10 @@ export default class Authorization extends React.Component {
     };
         
     return (
-        <>
-        <h1>Authorisation page</h1>
+      <FrontendTemplate>
+        <Title>Registration page</Title>
         <Form
-      name="basic"
+      name="registration"
       labelCol={{
         span: 8,
       }}
@@ -34,42 +36,53 @@ export default class Authorization extends React.Component {
       autoComplete="off"
     >
       <Form.Item
-        label="Username"
-        name="username"
+        label="Firstname"
+        name="Your firstname"
         rules={[
           {
             required: true,
-            message: 'Please input your username!',
+            message: 'Please input your firstname!',
           },
         ]}
       >
         <Input />
       </Form.Item>
-
       <Form.Item
-        label="Password"
-        name="password"
+        label="Surname"
+        name="Your surname"
         rules={[
           {
             required: true,
-            message: 'Please input your password!',
+            message: 'Please input your surname!',
           },
         ]}
       >
-        <Input.Password />
+        <Input />
       </Form.Item>
-
       <Form.Item
-        name="remember"
-        valuePropName="checked"
-        wrapperCol={{
-          offset: 8,
-          span: 16,
-        }}
+        label="Email"
+        name="Your email"
+        rules={[
+          {
+            required: true,
+            message: 'Please input your email!',
+          },
+        ]}
       >
-        <Checkbox>Remember me</Checkbox>
+        <Input />
       </Form.Item>
-
+      <Form.Item
+        label="Cellular"
+        name="Your cellular"
+        rules={[
+          {
+            required: true,
+            message: 'Please input your cellular!',
+          },
+        ]}
+      >
+        <Input />
+      </Form.Item>
       <Form.Item
         wrapperCol={{
           offset: 8,
@@ -77,11 +90,11 @@ export default class Authorization extends React.Component {
         }}
       >
         <Button type="primary" htmlType="submit">
-          Submit
+          Registration
         </Button>
       </Form.Item>
     </Form>
-    </>
+    </FrontendTemplate>
     );
   }
 }
