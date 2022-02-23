@@ -1,5 +1,5 @@
 import React from 'react';
-import FrontendTemplate from '../Components/FrontendTemplate'; 
+import FrontendTemplate from '../../Components/FrontendTemplate/FrontendTemplate'; 
 
 export default class Home extends React.Component {
   render() {

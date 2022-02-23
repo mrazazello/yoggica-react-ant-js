@@ -1,0 +1,9 @@
+.membershipItem {
+    background-color: #808080;
+    border-radius: 8px;
+    padding: 6px 16px;
+}
+.price {
+    float: right;
+    font-size: 20px;
+}

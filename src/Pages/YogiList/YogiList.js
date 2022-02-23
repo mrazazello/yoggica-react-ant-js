@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import AdminCommonTemplate from '../Components/AdminCommonTemplate'
+import AdminCommonTemplate from '../../Components/AdminCommonTemplate/AdminCommonTemplate'
 import { Typography, Table, Tag, Button, Input, Space } from 'antd';
 import Highlighter from 'react-highlight-words';
 import { SearchOutlined } from '@ant-design/icons';
@@ -29,7 +29,7 @@ for (let i = 2; i < 45; i +=1) {
 
 
 
-export default class Yogis extends React.Component {
+export default class YogiList extends React.Component {
   state = {
     selectedRowKeys: [], // Check here to configure the default column
     loading: false,

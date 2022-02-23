@@ -1,4 +1,6 @@
 .fieldSet {
     background-color: #f0f2f5; 
     padding: 16px 16px;
+    margin-bottom: 16px;
+    width: 100%;
 }

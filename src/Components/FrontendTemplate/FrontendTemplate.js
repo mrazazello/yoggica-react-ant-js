@@ -5,8 +5,8 @@ import './FrontendTemplate.css'
 
 import { Layout } from 'antd';
 
-import TopMenu from './TopMenu';
-import UserHeaderAuthorization from './UserHeaderAuthorization';
+import TopMenu from '../TopMenu/TopMenu';
+import UserHeaderAuthorization from '../UserHeaderAuthorization/UserHeaderAuthorization';
 
 const { Header, Content } = Layout;
 

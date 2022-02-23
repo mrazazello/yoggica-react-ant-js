@@ -5,9 +5,9 @@ import './AdminCommonTemplate.css';
 
 import { Layout } from 'antd';
 
-import SideMenu from './SideMenu';
-import TopMenu from './TopMenu';
-import UserHeaderAuthorization from './UserHeaderAuthorization';
+import SideMenu from '../SideMenu/SideMenu';
+import TopMenu from '../TopMenu/TopMenu';
+import UserHeaderAuthorization from '../UserHeaderAuthorization/UserHeaderAuthorization';
 
 const { Header, Sider, Content } = Layout;
 
