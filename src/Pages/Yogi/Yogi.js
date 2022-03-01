@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 import AdminCommonTemplate from '../../Components/AdminCommonTemplate/AdminCommonTemplate';
 
 import BookingsByUser from '../../Components/BookingsByUser/BookingsByUser';
+import VisitsByUser from '../../Components/VisitsByUser/VisitsByUser';
 import MembreshipItem from '../../Components/MembershipItem/MembershipItem';
-import { Typography, Button, Space, Row, Col, Avatar, Tag, Divider, Table } from 'antd';
+import { Typography, Button, Space, Row, Col, Avatar, Tag, Divider, Tabs } from 'antd';
 import './Yogi.css';
 import { FacebookFilled, GoogleSquareFilled, CheckCircleFilled, UserOutlined } from '@ant-design/icons';
 
@@ -12,6 +13,12 @@ import { FacebookFilled, GoogleSquareFilled, CheckCircleFilled, UserOutlined } f
 export default class Yogi extends React.Component {
     render() {
         const { Title, Paragraph } = Typography;
+        const { TabPane } = Tabs;
+
+        const callback = (key) => {
+            console.log(key);
+        }
+          
 
         return (
           <AdminCommonTemplate>
@@ -19,7 +26,7 @@ export default class Yogi extends React.Component {
             <div style={{ marginBottom: 16 }}>
                 <Space>
                     <Button type="primary">Buy membership</Button>
-                    <Button>Edit</Button>
+                    <Button>Edit profile</Button>
                     <Button>Change password</Button>
                     <Button>Change role</Button>
                 </Space>
@@ -27,7 +34,7 @@ export default class Yogi extends React.Component {
 
             <Row gutter={[16, 16]}>
                 <Col span={16}>
-                    <div className="fieldSet">
+                    <div className="fieldSet withBg">
                         <Title level={4}>Basic data</Title>
                         <div style={{float: 'right'}}><Avatar size={128} icon={<UserOutlined />} /></div>
                         <div>Email: vasiliy23@gmail.com <CheckCircleFilled /></div>
@@ -45,11 +52,24 @@ export default class Yogi extends React.Component {
                         </Paragraph>
                     </div>
 
-                    <Title level={4}>Booking</Title>
-                    <BookingsByUser userId="1" />
+                    <Tabs type="card" onChange={callback}>
+                        <TabPane tab="Booking" key="1">
+                            <BookingsByUser userId="1" />
+                        </TabPane>
+                        <TabPane tab="Visits" key="2">
+                            <VisitsByUser/>
+                        </TabPane>
+                        <TabPane tab="Payments" key="3">
+                            Content of Tab Pane 3
+                        </TabPane>
+                        <TabPane tab="Memberships" key="4">
+                            Content of Tab Pane 3
+                        </TabPane>
+                    </Tabs>
+
                 </Col>
                 <Col span={8}>
-                    <div className="fieldSet">
+                    <div className="fieldSet withBg">
                         <Title level={4}>Stats</Title>
                         <div>Registration: 01.06.2022</div>
                         <div>Last authorisation: 01.01.2022</div>
@@ -60,7 +80,7 @@ export default class Yogi extends React.Component {
                         <div>Classes visited: <strong>20</strong> (full list)</div>
                     </div>
 
-                    <div className="fieldSet">
+                    <div className="fieldSet witBg">
                         <Title level={4}>Current membership</Title>
                         <MembreshipItem />
                         <div>Total membership purchased: 6</div>

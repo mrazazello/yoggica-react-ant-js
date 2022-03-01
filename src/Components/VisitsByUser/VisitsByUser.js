@@ -5,30 +5,30 @@ import { Button, Space, Table } from 'antd';
 
 const dataSource = [
     {
-      key: '1',
-      name: 'Hatha yoga',
-      date: '01.06.2021 13:00',
-      membership: '8 classes',
-      actions: ['confirm visit', 'cancel'],
+        key: '1',
+        class: 'Hatha yoga',
+        date: '01.06.2021 13:00',
+        membership: '8 classes',
+        actions: ['cancel'],
     },
     {
         key: '2',
-        name: 'Ashtanga yoga',
+        class: 'Ashtanga yoga',
         date: '01.06.2021 13:00',
         membership: '8 classes',
-        actions: ['confirm visit', 'cancel'],
+        actions: ['cancel'],
       },
 ];
 
 
-export default class BookingsByUser extends React.Component {
+export default class VisitsByUser extends React.Component {
     render() {
         const columns = [
             {
                 title: 'Class',
-                dataIndex: 'name',
-                key: 'name',
-                render: title => <Link to="/yog">{title}</Link>,
+                dataIndex: 'class',
+                key: 'class',
+                render: title => <Link to="/class">{title}</Link>,
             },
             {
                 title: 'Date',
